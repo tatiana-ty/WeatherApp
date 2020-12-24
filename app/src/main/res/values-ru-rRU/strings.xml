@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="location">Санкт-Петербург</string>
+    <string name="weatherType">Солнечно</string>
+    <string name="day1">Понедельник</string>
+    <string name="day2">Вторник</string>
+    <string name="day3">Среда</string>
+    <string name="day4">Четверг</string>
+    <string name="day5">Пятница</string>
+    <string name="day6">Суббота</string>
+    <string name="day7">Воскресенье</string>
+</resources>

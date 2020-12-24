@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="temperature" translatable="false">10℃</string>
+    <string name="degree" translatable="false">℃</string>
+    <string name="weatherType">Sunny</string>
+    <string name="day1">Monday</string>
+    <string name="day2">Tuesday</string>
+    <string name="day3">Wednesday</string>
+    <string name="day4">Thursday</string>
+    <string name="day5">Friday</string>
+    <string name="day6">Saturday</string>
+    <string name="day7">Sunday</string>
+    <string name="weather1" translatable="false">12℃</string>
+    <string name="weather2" translatable="false">11℃</string>
+    <string name="weather3" translatable="false">6℃</string>
+    <string name="weather4" translatable="false">10℃</string>
+    <string name="weather5" translatable="false">11℃</string>
+    <string name="weather6" translatable="false">8℃</string>
+    <string name="weather7" translatable="false">7℃</string>
+    <string name="location">Saint-Petersburg</string>
+</resources>
