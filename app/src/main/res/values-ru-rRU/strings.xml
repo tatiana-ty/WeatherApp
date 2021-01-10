@@ -10,4 +10,23 @@
     <string name="day5">Пятница</string>
     <string name="day6">Суббота</string>
     <string name="day7">Воскресенье</string>
+    <string name="chooseCity">Города</string>
+    <string name="city">Санкт-Петербург</string>
+    <string name="addCity">Добавить город</string>
+    <string name="search">Поиск</string>
+    <string name="popular_cities">Популярные города:</string>
+    <string name="new_york">Нью-Йорк</string>
+    <string name="paris">Париж</string>
+    <string name="london">Лондон</string>
+    <string name="tokyo">Токио</string>
+    <string name="rome">Рим</string>
+    <string name="dubai">Дубай</string>
+    <string name="moscow">Москва</string>
+    <string name="sydney">Сидней</string>
+    <string name="hong_kong">Гонконг</string>
+    <string name="settings">Настройки</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="language_title">Язык</string>
+    <string name="language1">Английский</string>
+    <string name="language2">Русский</string>
 </resources>
