@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dailyWeatherStart">28dp</dimen>
+    <dimen name="spaceBetweenDays">12dp</dimen>
+    <dimen name="dailyWeatherTextSize">19sp</dimen>
+    <dimen name="iconsSize">28dp</dimen>
+    <dimen name="dailyWeatherEnd">40dp</dimen>
+</resources>
