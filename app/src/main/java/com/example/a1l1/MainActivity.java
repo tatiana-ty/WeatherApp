@@ -1,5 +1,6 @@
 package com.example.a1l1;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -79,27 +80,27 @@ public class MainActivity extends AppCompatActivity {
             degrees.setText("°F");
             String newT = String.valueOf(t * 9/5 + 32);
             temperature.setText(newT);
-            this.degrees = "°F";
+            MainActivity.degrees = "°F";
             this.temperature = newT;
         }
         else {
             degrees.setText("°C");
             String newT = String.valueOf((t - 32) * 5/9);
             temperature.setText(newT);
-            this.degrees = "°C";
+            MainActivity.degrees = "°C";
             this.temperature = newT;
         }
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle saveInstanceState){
+    protected void onSaveInstanceState(@NonNull Bundle saveInstanceState){
         super.onSaveInstanceState(saveInstanceState);
         saveInstanceState.putString("Temperature", temperature);
         saveInstanceState.putString("Degrees", degrees);
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle saveInstanceState){
+    protected void onRestoreInstanceState(@NonNull Bundle saveInstanceState){
         super.onRestoreInstanceState(saveInstanceState);
         temperature = saveInstanceState.getString("Temperature");
         degrees = saveInstanceState.getString("Degrees");
