@@ -28,16 +28,40 @@
             tools:ignore="ContentDescription" />
 
         <TextView
+            android:id="@+id/center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintEnd_toEndOf="@+id/background"
+            app:layout_constraintStart_toStartOf="@+id/background"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/currentWeather"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:text="@string/temperature"
             android:textColor="@color/black"
             android:textSize="80sp"
             app:layout_constraintBottom_toBottomOf="@id/background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/center"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="change_metric" />
+
+        <TextView
+            android:id="@+id/degrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/celsius"
+            android:textColor="@color/black"
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="@id/background"
+            app:layout_constraintStart_toEndOf="@+id/center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="change_metric" />
 
         <TextView
             android:id="@+id/location"

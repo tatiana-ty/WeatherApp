@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
-    <string name="temperature" translatable="false">10℃</string>
-    <string name="degree" translatable="false">℃</string>
+    <string name="temperature" translatable="false">10</string>
+    <string name="celsius" translatable="false">°C</string>
+    <string name="fahrenheit" translatable="false">°F</string>
     <string name="weatherType">Sunny</string>
     <string name="day1">Monday</string>
     <string name="day2">Tuesday</string>
