@@ -22,12 +22,13 @@
 
             <ImageView
                 android:id="@+id/backIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/back"
-                android:layout_marginEnd="8dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="4dp"
                 android:layout_weight="1"
+                app:srcCompat="@drawable/back"
                 tools:ignore="ContentDescription" />
 
             <TextView
@@ -40,10 +41,11 @@
 
             <ImageView
                 android:id="@+id/addIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
                 android:gravity="end"
                 app:srcCompat="@drawable/add"
                 android:layout_weight="1"
@@ -53,6 +55,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -61,6 +64,7 @@
             android:layout_marginEnd="20dp">
 
             <TextView
+                android:id="@+id/city1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/city"
@@ -69,6 +73,7 @@
                 android:layout_weight="3"/>
 
             <TextView
+                android:id="@+id/t1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/temperature"
@@ -81,6 +86,7 @@
 
 
         <LinearLayout
+            android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -89,17 +95,19 @@
             android:layout_marginEnd="20dp">
 
             <TextView
+                android:id="@+id/city2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/city"
+                android:text="@string/moscow"
                 android:textSize="30sp"
                 android:textColor="@color/text"
-                android:layout_weight="3"/>
+                android:layout_weight="3" />
 
             <TextView
+                android:id="@+id/t2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/temperature"
+                android:text="15"
                 android:textSize="30sp"
                 android:textColor="@color/text"
                 android:layout_weight="1"

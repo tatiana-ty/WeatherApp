@@ -1,25 +1,75 @@
 package com.example.a1l1;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private String temperature = "10";
-    private String degrees = "°C";
+    static String degrees = "°C";
+    private final int chooseCityCode = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView changeMetric = findViewById(R.id.currentWeather);
+        TextView changeMetric1 = findViewById(R.id.degrees);
+        changeMetric.setOnClickListener(v -> changeMetric(changeMetric));
+        changeMetric1.setOnClickListener(v -> changeMetric(changeMetric1));
+
+        ImageView chooseCity = findViewById(R.id.cityIcon);
+        chooseCity.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ChooseCity.class);
+            startActivityForResult(intent, chooseCityCode);
+        });
+
+        ImageView settings = findViewById(R.id.settingsIcon);
+        settings.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Settings.class);
+            startActivity(intent);
+        });
+
+        ImageView info = findViewById(R.id.infoIcon);
+        TextView city = findViewById(R.id.location);
+        info.setOnClickListener(v -> {
+            String baseUrl = "https://wikipedia.org/wiki/";
+            String url = baseUrl + city.getText().toString();
+            Uri uri = Uri.parse(url);
+            Intent browser = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(browser);
+        });
+
+//        Location location = (Location) getIntent().getExtras().getSerializable("1234");
+//        TextView uLocation = findViewById(R.id.location);
+//        TextView temperature = findViewById(R.id.degrees);
+//        uLocation.setText(location.city);
+//        temperature.setText(location.temperature);
+
+
     }
 
-    public void change_metric(View v)
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == chooseCityCode && resultCode == RESULT_OK) {
+            TextView city = findViewById(R.id.location);
+            TextView weather = findViewById(R.id.currentWeather);
+            Location l = (Location) data.getSerializableExtra(ChooseCity.key);
+            city.setText(l.city);
+            weather.setText(l.temperature);
+        }
+    }
+
+    public void changeMetric(View v)
     {
         TextView degrees = findViewById(R.id.degrees);
         TextView temperature = findViewById(R.id.currentWeather);
@@ -57,48 +107,6 @@ public class MainActivity extends AppCompatActivity {
         TextView t = findViewById(R.id.currentWeather);
         d.setText(degrees);
         t.setText(temperature);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onStart()");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onResume()");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onPause()");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onStop()");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onRestart()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
-        Log.d("Log", "onDestroy()");
     }
 
 }
