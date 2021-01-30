@@ -41,13 +41,25 @@
 
         </LinearLayout>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/search"
-            android:textSize="25sp"
-            android:autofillHints=""
-            android:inputType="text" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search" />
+
+                <Button
+                    android:id="@+id/ok"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:layout_gravity="end"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,6 +84,7 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/newYork"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/new_york"
@@ -81,6 +94,7 @@
                     android:layout_weight="1" />
 
                 <Button
+                    android:id="@+id/paris"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/paris"
@@ -90,6 +104,7 @@
                     android:layout_weight="1"/>
 
                 <Button
+                    android:id="@+id/london"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/london"
@@ -106,6 +121,7 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/tokyo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/tokyo"
@@ -116,6 +132,7 @@
                     android:background="@color/white" />
 
                 <Button
+                    android:id="@+id/rome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rome"
@@ -125,6 +142,7 @@
                     android:layout_weight="1"/>
 
                 <Button
+                    android:id="@+id/dubai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/dubai"
@@ -141,6 +159,7 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/moscow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/moscow"
@@ -151,6 +170,7 @@
                     android:background="@color/white" />
 
                 <Button
+                    android:id="@+id/hongKong"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/hong_kong"
@@ -160,6 +180,7 @@
                     android:layout_weight="1"/>
 
                 <Button
+                    android:id="@+id/sydney"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sydney"
@@ -171,6 +192,7 @@
             </TableRow>
 
         </TableLayout>
+
     </LinearLayout>
 
 </ScrollView>

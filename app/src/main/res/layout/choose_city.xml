@@ -54,73 +54,11 @@
 
         </LinearLayout>
 
-        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent" android:layout_height="match_parent">
-            <fragment android:name="com.example.a1l1.CitiesFragment"
-                android:id="@+id/cities"
-                android:layout_width="match_parent" android:layout_height="match_parent" />
-        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-<!--        <LinearLayout-->
-<!--            android:id="@+id/line1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginEnd="20dp">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/city1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/city"-->
-<!--                android:textSize="30sp"-->
-<!--                android:textColor="@color/text"-->
-<!--                android:layout_weight="3"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/t1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/temperature"-->
-<!--                android:textSize="30sp"-->
-<!--                android:textColor="@color/text"-->
-<!--                android:layout_weight="1"-->
-<!--                android:gravity="end"/>-->
-
-<!--        </LinearLayout>-->
-
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/line2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            android:layout_marginStart="20dp"-->
-<!--            android:layout_marginEnd="20dp">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/city2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/moscow"-->
-<!--                android:textSize="30sp"-->
-<!--                android:textColor="@color/text"-->
-<!--                android:layout_weight="3" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/t2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="15"-->
-<!--                android:textSize="30sp"-->
-<!--                android:textColor="@color/text"-->
-<!--                android:layout_weight="1"-->
-<!--                android:gravity="end"/>-->
-
-<!--        </LinearLayout>-->
 
     </LinearLayout>
 
