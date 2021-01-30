@@ -4,4 +4,14 @@
         <item>@string/language1</item>
         <item>@string/language2</item>
     </string-array>
+
+    <string-array name="cities">
+        <item>Moscow</item>
+        <item>Saint-Petersburg</item>
+    </string-array>
+
+    <string-array name="temperatures">
+        <item>15</item>
+        <item>10</item>
+    </string-array>
 </resources>
